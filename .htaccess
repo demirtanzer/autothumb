@@ -1,0 +1,6 @@
+AddDefaultCharset UTF-8
+Options -Indexes +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([-0-9a-zA-Z/%&_.]+) index.php?img=$1 [L,QSA,NC]
